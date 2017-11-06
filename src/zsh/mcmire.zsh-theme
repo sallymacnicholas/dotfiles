@@ -101,7 +101,7 @@ function Prompt__rbenv_info_fragment {
   local rbenv_info="$(Prompt__Fragment__rbenv_info)"
 
   if [[ -n $rbenv_info ]]; then
-    echo -n " using $(Color__red "ruby $rbenv_info")"
+    echo -n " using $(Color__magenta "ruby $rbenv_info")"
   fi
 }
 

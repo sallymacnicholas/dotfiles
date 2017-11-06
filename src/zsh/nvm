@@ -1,3 +1,5 @@
-source /usr/local/opt/nvm/nvm.sh
+#was getting error so just commented out
+#bc wtf is this even?
+#source /usr/local/opt/nvm/nvm.sh
 
 # vi: ft=sh

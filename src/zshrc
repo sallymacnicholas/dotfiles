@@ -22,3 +22,5 @@ source ~/.zsh/vim
 source ~/.zsh/zmv
 source ~/.zsh/zzz_aliases
 source ~/.zsh/zzz_functions
+export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
+export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
