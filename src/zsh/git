@@ -1,10 +1,10 @@
 # hubba hubba
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
 
-hitch() {
-  command hitch "$@"
-  if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
-}
-alias unhitch='hitch -u'
+#hitch() {
+  #command hitch "$@"
+  #if [[ -s "$HOME/.hitch_export_authors" ]] ; then source "$HOME/.hitch_export_authors" ; fi
+#}
+#alias unhitch='hitch -u'
 
 # vi: ft=sh

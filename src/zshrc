@@ -11,16 +11,18 @@ source ~/.zsh/history
 source ~/.zsh/java
 source ~/.zsh/mcmire.zsh-theme
 source ~/.zsh/nvm
-source ~/.zsh/perl6
+source ~/.zsh/npm
 source ~/.zsh/python
 source ~/.zsh/rails
-source ~/.zsh/rbenv
 source ~/.zsh/tmux
-source ~/.zsh/travis
 source ~/.zsh/unicode
 source ~/.zsh/vim
 source ~/.zsh/zmv
 source ~/.zsh/zzz_aliases
 source ~/.zsh/zzz_functions
-export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/sbin:$PATH"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH=$PATH:/usr/local/go/bin
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@9.6/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin"

@@ -66,23 +66,8 @@ function Prompt__Fragment__git_branch {
   echo "${ref#refs/heads/}"
 }
 
-function Prompt__Fragment__rbenv_info {
-  local out="$(rbenv version | sed -e 's/ (set.*$//')"
-
-  local gemsets="$(rbenv gemset active 2>/dev/null | perl -ne 'print join(", ", split(" ")) . "\n"')"
-  if [[ -n $gemsets ]]; then
-    out+=" (gemsets: $gemsets)"
-  fi
-
-  echo -n "$out"
-}
-
 function Prompt__rvm_prompt_path {
   echo -n "$(which rvm-prompt &>/dev/null)"
-}
-
-function Prompt__rbenv_path {
-  echo -n "$(which rbenv &>/dev/null)"
 }
 
 function Prompt__username_fragment {
@@ -94,14 +79,6 @@ function Prompt__git_branch_fragment {
 
   if [[ -n $git_branch ]]; then
     echo -n " on $(Color__yellow "$git_branch")"
-  fi
-}
-
-function Prompt__rbenv_info_fragment {
-  local rbenv_info="$(Prompt__Fragment__rbenv_info)"
-
-  if [[ -n $rbenv_info ]]; then
-    echo -n " using $(Color__magenta "ruby $rbenv_info")"
   fi
 }
 
@@ -117,7 +94,6 @@ function Prompt__value {
   echo -n '$(Prompt__username_fragment)'
   echo -n '$(Prompt__cwd_fragment)'
   echo -n '$(Prompt__git_branch_fragment)'
-  echo -n '$(Prompt__rbenv_info_fragment)'
   echo -n "\n"
   echo '∴ '
 }
